@@ -1,6 +1,9 @@
 //Traversing a linked binary tree
 //Queue functions and structs needed for level order traversal. 
 
+#include<stdio.h>
+#include<stdlib.h>
+
 struct Data{
 	int data;
 };
@@ -30,12 +33,12 @@ void printPostOrder(struct Node * currNode){
 
 void printPreOrder(struct Node * currNode){
 	if(currNode != NULL){
-		printf(currNode->d.data);
+		printf("%d\n", currNode->d.data);
 		printPreOrder(currNode->lChild);
 		printPreOrder(currNode->rChild);
 	}
 }
-
+/* NOT WORKING, NEEDS TO BE FIXED:
 void printLevelOrder(struct Node * currNode){
 	if(currNode != NULL){
 		struct Queue * q;
@@ -46,14 +49,10 @@ void printLevelOrder(struct Node * currNode){
 			dequeue(q, temp);
 			if(temp!=NULL){
 				printf("%d\n", temp->d.data);
-				enqueue(temp->lChild);
-				enqueue(temp->rChild);
+				enqueue(q, temp->lChild);
+				enqueue(q, temp->rChild);
 			}
 		}
 	}
 	free(q);
-}
-
-int main(void){
-
-}
+}*/
