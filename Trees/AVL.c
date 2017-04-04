@@ -65,6 +65,6 @@ int main(void){
 	printf("//////\n");
 	printPreOrder(rightRotate(n1));
 	printf("//////\n");
-	printPreOrder(leftRotate(rightRotate(n1)));
+	printPreOrder(leftRotate(rightRotate(n1))); //output from this line is a little off!
 
 }
