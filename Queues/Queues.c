@@ -11,7 +11,7 @@ struct Queue{
 	int currSize;
 	struct Node* head;
 	struct Node* tail;
-}
+};
 
 void initQueue(struct Queue** qPtr){
 	struct Queue* Q = (struct Queue*)malloc(sizeof(struct Queue));
